@@ -1,0 +1,28 @@
+# VLAN Configuration Automation Tool
+# Python 2.7 Dependencies - January 2013
+# Compatible with CentOS 6 and Python 2.7.3
+
+# SSH connectivity for Cisco switch access
+paramiko==1.10.1
+
+# JSON handling (included in Python 2.7 but explicit for documentation)
+# json - built-in module
+
+# File system operations
+# os - built-in module
+# sys - built-in module
+
+# Date/time operations for logging
+# datetime - built-in module
+
+# Regular expressions for parsing
+# re - built-in module
+
+# Threading for parallel operations
+# threading - built-in module
+
+# Configuration management
+# ConfigParser - built-in module (Python 2.7 style)
+
+# Logging
+# logging - built-in module

@@ -1,0 +1,78 @@
+{
+    "vlans": {
+        "vlans": [
+            {
+                "id": 10,
+                "name": "Data_VLAN",
+                "description": "Data network for workstations"
+            },
+            {
+                "id": 20,
+                "name": "Voice_VLAN", 
+                "description": "Voice network for IP phones"
+            },
+            {
+                "id": 30,
+                "name": "Guest_VLAN",
+                "description": "Guest network access"
+            },
+            {
+                "id": 100,
+                "name": "Management_VLAN",
+                "description": "Network management VLAN"
+            },
+            {
+                "id": 200,
+                "name": "DMZ_VLAN",
+                "description": "DMZ network for servers"
+            }
+        ]
+    },
+    
+    "interfaces": {
+        "interfaces": [
+            {
+                "name": "FastEthernet0/1",
+                "vlan_id": 10,
+                "description": "Workstation Port - Desk 1"
+            },
+            {
+                "name": "FastEthernet0/2", 
+                "vlan_id": 10,
+                "description": "Workstation Port - Desk 2"
+            },
+            {
+                "name": "FastEthernet0/3",
+                "vlan_id": 20,
+                "description": "IP Phone Port - Conference Room"
+            },
+            {
+                "name": "FastEthernet0/4",
+                "vlan_id": 30,
+                "description": "Guest Access Port"
+            },
+            {
+                "name": "FastEthernet0/5",
+                "vlan_id": 100,
+                "description": "Management Port"
+            }
+        ]
+    },
+    
+    "trunks": {
+        "trunks": [
+            {
+                "interface": "GigabitEthernet0/1",
+                "allowed_vlans": [1, 10, 20, 30, 100, 200],
+                "native_vlan": 1,
+                "description": "Uplink to core switch"
+            },
+            {
+                "interface": "GigabitEthernet0/2", 
+                "allowed_vlans": [10, 20, 30],
+                "native_vlan": 1,
+                "description": "Trunk to access switch"
+            }
+        ]
+    }
+}

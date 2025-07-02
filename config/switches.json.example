@@ -1,0 +1,47 @@
+{
+    "switches": [
+        {
+            "name": "core-switch-01",
+            "hostname": "192.168.1.10",
+            "username": "admin",
+            "password": "cisco123",
+            "device_type": "cisco_catalyst_2960",
+            "location": "Server Room A",
+            "description": "Core distribution switch"
+        },
+        {
+            "name": "access-switch-02", 
+            "hostname": "192.168.1.20",
+            "username": "admin",
+            "password": "cisco123",
+            "device_type": "cisco_catalyst_3560",
+            "location": "Floor 2 IDF",
+            "description": "Access layer switch - Floor 2"
+        },
+        {
+            "name": "access-switch-03",
+            "hostname": "192.168.1.30", 
+            "username": "admin",
+            "password": "cisco123",
+            "device_type": "cisco_catalyst_3750",
+            "location": "Floor 3 IDF",
+            "description": "Access layer switch - Floor 3"
+        }
+    ],
+    
+    "global_settings": {
+        "ssh_timeout": 30,
+        "command_timeout": 5,
+        "backup_enabled": true,
+        "backup_directory": "./backups",
+        "log_level": "INFO",
+        "parallel_execution": true,
+        "max_concurrent_connections": 5
+    },
+    
+    "credentials": {
+        "default_username": "admin",
+        "default_password": "cisco123",
+        "enable_password": "cisco123"
+    }
+}
